@@ -43,7 +43,16 @@ npm start -- --date 2024-02-14  # 日付を指定
 - **[docs/CRON_SETUP.md](docs/CRON_SETUP.md)** - cron設定ガイド
 - **[docs/DEVELOPMENT.md](docs/DEVELOPMENT.md)** - 開発背景・技術選定・工夫点
 
+## スキル
+
+開発に便利なClaude Codeスキルを同梱しています（`skills/` ディレクトリ）。
+
+| スキル | 説明 |
+|--------|------|
+| `/codex-review` | Codexを使ったコード・ドキュメントレビュー |
+| `/gh-workflow` | GitHub CLI（gh）を使ったIssue・PR操作ガイド |
+
 ## 必要環境
 
-- Node.js 18+
+- Node.js 20+
 - Claude Code認証済み（`claude` コマンドで認証）
