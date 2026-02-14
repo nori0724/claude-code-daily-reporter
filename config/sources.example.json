@@ -1,0 +1,208 @@
+{
+  "sources": [
+    {
+      "id": "claude_blog",
+      "name": "Claude Blog",
+      "tier": 1,
+      "enabled": true,
+      "collectMethod": "WebFetch",
+      "url": "https://claude.com/ja-jp/blog",
+      "dateMethod": "html_meta",
+      "dateSelector": "meta[property='article:published_time']",
+      "maxArticles": 10
+    },
+    {
+      "id": "openai_news",
+      "name": "OpenAI News",
+      "tier": 1,
+      "enabled": true,
+      "collectMethod": "WebSearch",
+      "query": "site:openai.com/news",
+      "dateMethod": "search_result",
+      "maxArticles": 10
+    },
+    {
+      "id": "anthropic_blog",
+      "name": "Anthropic Blog",
+      "tier": 1,
+      "enabled": true,
+      "collectMethod": "WebFetch",
+      "url": "https://www.anthropic.com/news",
+      "dateMethod": "html_meta",
+      "dateSelector": "meta[property='article:published_time']",
+      "maxArticles": 10
+    },
+    {
+      "id": "hackernews",
+      "name": "HackerNews",
+      "tier": 1,
+      "enabled": true,
+      "collectMethod": "WebFetch",
+      "url": "https://news.ycombinator.com/",
+      "dateMethod": "html_parse",
+      "dateSelector": "span.age",
+      "maxArticles": 15
+    },
+    {
+      "id": "techcrunch",
+      "name": "TechCrunch",
+      "tier": 2,
+      "enabled": true,
+      "collectMethod": "WebSearch",
+      "query": "site:techcrunch.com",
+      "dateMethod": "url_parse",
+      "datePattern": "/(\\d{4})/(\\d{2})/(\\d{2})/",
+      "maxArticles": 10
+    },
+    {
+      "id": "arxiv",
+      "name": "arXiv",
+      "tier": 2,
+      "enabled": true,
+      "collectMethod": "WebSearch",
+      "query": "site:arxiv.org (\"cs.AI\" OR \"cs.CV\" OR \"cs.LG\" OR \"cs.CL\")",
+      "dateMethod": "search_result",
+      "maxArticles": 10
+    },
+    {
+      "id": "qiita",
+      "name": "Qiita",
+      "tier": 2,
+      "enabled": true,
+      "collectMethod": "WebFetch",
+      "url": "https://qiita.com/",
+      "dateMethod": "html_meta",
+      "dateSelector": "meta[property='article:published_time']",
+      "maxArticles": 8
+    },
+    {
+      "id": "zenn",
+      "name": "Zenn",
+      "tier": 2,
+      "enabled": true,
+      "collectMethod": "WebFetch",
+      "url": "https://zenn.dev/",
+      "dateMethod": "html_meta",
+      "dateSelector": "meta[property='article:published_time']",
+      "maxArticles": 8
+    },
+    {
+      "id": "cursor_blog",
+      "name": "Cursor Blog",
+      "tier": 2,
+      "enabled": true,
+      "collectMethod": "WebFetch",
+      "url": "https://cursor.com/ja/blog",
+      "dateMethod": "html_meta",
+      "dateSelector": "meta[property='article:published_time']",
+      "maxArticles": 5
+    },
+    {
+      "id": "cognition_blog",
+      "name": "Cognition Blog",
+      "tier": 2,
+      "enabled": true,
+      "collectMethod": "WebFetch",
+      "url": "https://cognition.ai/blog",
+      "dateMethod": "html_meta",
+      "dateSelector": "meta[property='article:published_time']",
+      "maxArticles": 5
+    },
+    {
+      "id": "hatena_dev",
+      "name": "はてな企業ブログ",
+      "tier": 2,
+      "enabled": true,
+      "collectMethod": "WebFetch",
+      "url": "https://hatena.blog/dev",
+      "dateMethod": "html_meta",
+      "dateSelector": "meta[property='article:published_time']",
+      "maxArticles": 5
+    },
+    {
+      "id": "twitter",
+      "name": "X (Twitter)",
+      "tier": 3,
+      "enabled": true,
+      "collectMethod": "WebSearch",
+      "accounts": [
+        "OpenAI", "sama", "OpenAIDevs", "AnthropicAI", "alexalbert__",
+        "_akhaliq", "awni_ml", "hillbig", "iwiwi", "icoxfog417",
+        "fujii_ikki", "Aratako", "odashi", "Plat", "celery", "npaka",
+        "hpp", "Bilzard", "bcherny",
+        "RadianceFields", "LumaLabsAI", "Arata_Fukoe", "smallfly",
+        "kenn", "ry0_kaga", "Fumiya_Kume", "seratch_ja", "ryoppippi"
+      ],
+      "dateMethod": "search_result",
+      "maxArticles": 15
+    }
+  ],
+  "rateControl": {
+    "maxConcurrency": 1,
+    "defaultTimeout": 120000,
+    "defaultRetryInterval": 5000,
+    "defaultMaxRetries": 1,
+    "perSource": {
+      "claude_blog": {
+        "timeout": 120000,
+        "retryInterval": 5000,
+        "maxRetries": 3
+      },
+      "openai_news": {
+        "timeout": 120000,
+        "retryInterval": 5000,
+        "maxRetries": 3
+      },
+      "anthropic_blog": {
+        "timeout": 120000,
+        "retryInterval": 5000,
+        "maxRetries": 3
+      },
+      "hackernews": {
+        "timeout": 60000,
+        "retryInterval": 5000,
+        "maxRetries": 3
+      },
+      "techcrunch": {
+        "timeout": 60000,
+        "retryInterval": 5000,
+        "maxRetries": 1
+      },
+      "arxiv": {
+        "timeout": 120000,
+        "retryInterval": 10000,
+        "maxRetries": 1
+      },
+      "qiita": {
+        "timeout": 60000,
+        "retryInterval": 5000,
+        "maxRetries": 1
+      },
+      "zenn": {
+        "timeout": 60000,
+        "retryInterval": 5000,
+        "maxRetries": 1
+      },
+      "cursor_blog": {
+        "timeout": 60000,
+        "retryInterval": 5000,
+        "maxRetries": 1
+      },
+      "cognition_blog": {
+        "timeout": 60000,
+        "retryInterval": 5000,
+        "maxRetries": 1
+      },
+      "hatena_dev": {
+        "timeout": 60000,
+        "retryInterval": 5000,
+        "maxRetries": 1
+      },
+      "twitter": {
+        "timeout": 60000,
+        "retryInterval": 10000,
+        "maxRetries": 0
+      }
+    }
+  }
+}

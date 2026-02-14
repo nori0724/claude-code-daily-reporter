@@ -1,0 +1,68 @@
+{
+  "LLM": [
+    "大規模言語モデル",
+    "Large Language Model",
+    "言語モデル",
+    "Language Model",
+    "Claude",
+    "GPT",
+    "GPT-4",
+    "GPT-5",
+    "ChatGPT",
+    "Gemini",
+    "Agent",
+    "AIエージェント",
+    "AI Agent",
+    "RAG",
+    "Retrieval Augmented Generation",
+    "検索拡張生成"
+  ],
+  "3DCG": [
+    "3D",
+    "CG",
+    "コンピュータグラフィックス",
+    "Computer Graphics"
+  ],
+  "映像生成": [
+    "動画生成",
+    "Video Generation",
+    "Text-to-Video",
+    "ビデオ生成"
+  ],
+  "画像生成": [
+    "Image Generation",
+    "Text-to-Image",
+    "Stable Diffusion",
+    "生成AI画像"
+  ],
+  "kaggle": [
+    "Kaggle",
+    "機械学習コンペ",
+    "ML Competition"
+  ],
+  "MCP": [
+    "Model Context Protocol",
+    "モデルコンテキストプロトコル"
+  ],
+  "ツール": [
+    "Tools",
+    "開発ツール",
+    "Dev Tools"
+  ],
+  "展示・イベント": [
+    "Exhibition",
+    "Event",
+    "イベント",
+    "展示会"
+  ],
+  "論文": [
+    "Paper",
+    "Research",
+    "研究"
+  ],
+  "モデル": [
+    "Model",
+    "AI Model",
+    "AIモデル"
+  ]
+}

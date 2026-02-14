@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+coverage/
+*.tsbuildinfo
+
+# Config files (use *.example.json as templates)
+config/sources.json
+config/queries.json
+config/tag-synonyms.json
+config/dedup-thresholds.json
+config/default.json
+
+# Local data (contains sensitive/personal data)
+data/
+
+# Runtime logs
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Generated reports
+output/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE / Editor
+.claude/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Internal documentation (team-specific)
+docs/やりたいこと.md
+docs/参考.md
+
+# Test snapshots (optional - uncomment if you want to commit snapshots)
+# tests/**/__snapshots__/

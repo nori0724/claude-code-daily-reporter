@@ -1,0 +1,42 @@
+{
+  "metric_definitions": {
+    "jaccard": "Jaccard類似度（0-1、1が完全一致）。しきい値以上で重複と判定",
+    "levenshtein": "正規化Levenshtein距離（0-1、0が完全一致）。しきい値以下で重複と判定"
+  },
+  "thresholds": {
+    "default": {
+      "jaccard_gte": 0.7,
+      "levenshtein_lte": 0.3
+    },
+    "arxiv": {
+      "jaccard_gte": 0.8,
+      "levenshtein_lte": 0.2
+    },
+    "news": {
+      "jaccard_gte": 0.6,
+      "levenshtein_lte": 0.4
+    },
+    "blog": {
+      "jaccard_gte": 0.75,
+      "levenshtein_lte": 0.25
+    }
+  },
+  "layer2_fallback": {
+    "hackernews": {
+      "same_domain": 0.9,
+      "cross_domain": 0.95
+    },
+    "qiita": {
+      "same_domain": 0.8,
+      "cross_domain": 0.85
+    },
+    "zenn": {
+      "same_domain": 0.8,
+      "cross_domain": 0.85
+    },
+    "default": {
+      "same_domain": 0.85,
+      "cross_domain": 0.9
+    }
+  }
+}

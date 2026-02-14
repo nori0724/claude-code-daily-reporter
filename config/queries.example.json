@@ -1,0 +1,136 @@
+{
+  "queryGroups": [
+    {
+      "id": "llm",
+      "name": "LLM/エージェント",
+      "keywords": [
+        "LLM",
+        "Large Language Model",
+        "GPT",
+        "Claude",
+        "Gemini",
+        "Agent",
+        "RAG",
+        "Prompt Engineering",
+        "大規模言語モデル"
+      ],
+      "weight": 1.5
+    },
+    {
+      "id": "tools_mcp",
+      "name": "ツール/MCP",
+      "keywords": [
+        "MCP",
+        "Model Context Protocol",
+        "Claude Code",
+        "Cursor",
+        "Copilot",
+        "AI IDE",
+        "開発ツール",
+        "Cline",
+        "Codex"
+      ],
+      "weight": 1.4
+    },
+    {
+      "id": "3dcg",
+      "name": "3DCG/映像",
+      "keywords": [
+        "3DCG",
+        "Gaussian Splatting",
+        "NeRF",
+        "4D",
+        "Blender",
+        "Unity",
+        "Unreal Engine",
+        "3D生成"
+      ],
+      "weight": 1.3
+    },
+    {
+      "id": "video_gen",
+      "name": "映像生成",
+      "keywords": [
+        "動画生成",
+        "Video Generation",
+        "Sora",
+        "Runway",
+        "Kling",
+        "Veo",
+        "Dream Machine",
+        "Text-to-Video"
+      ],
+      "weight": 1.3
+    },
+    {
+      "id": "image_gen",
+      "name": "画像生成",
+      "keywords": [
+        "画像生成",
+        "Image Generation",
+        "Stable Diffusion",
+        "DALL-E",
+        "Midjourney",
+        "ComfyUI",
+        "Flux",
+        "Text-to-Image"
+      ],
+      "weight": 1.2
+    },
+    {
+      "id": "kaggle",
+      "name": "kaggle/ML",
+      "keywords": [
+        "kaggle",
+        "機械学習",
+        "Machine Learning",
+        "コンペティション",
+        "特徴量エンジニアリング",
+        "LightGBM",
+        "XGBoost"
+      ],
+      "weight": 1.2
+    },
+    {
+      "id": "events",
+      "name": "展示・イベント",
+      "keywords": [
+        "展示",
+        "イベント",
+        "カンファレンス",
+        "メディアアート",
+        "インスタレーション",
+        "学会"
+      ],
+      "weight": 1.0
+    },
+    {
+      "id": "music_gen",
+      "name": "音楽生成",
+      "keywords": [
+        "音楽生成",
+        "Suno",
+        "Udio",
+        "Music Generation",
+        "AI作曲"
+      ],
+      "weight": 1.0
+    }
+  ],
+  "combinedQueries": {
+    "enabled": true,
+    "maxCombinations": 3
+  },
+  "dateRestriction": {
+    "enabled": true,
+    "withinDays": 7
+  },
+  "selection": {
+    "topN": 20,
+    "maxPerSource": 5
+  },
+  "recalculation": {
+    "interval": "monthly",
+    "basedOn": "knowledgeShareDB"
+  }
+}

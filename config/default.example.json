@@ -1,0 +1,49 @@
+{
+  "agent": {
+    "maxTurns": 30,
+    "maxTurnsOrganizer": 10,
+    "permissionMode": "bypassPermissions",
+    "model": "claude-sonnet-4-20250514",
+    "timeout": 300000
+  },
+  "deduplication": {
+    "enabled": true,
+    "urlNormalization": {
+      "removeParams": [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_content",
+        "utm_term",
+        "ref",
+        "source",
+        "via",
+        "fbclid",
+        "gclid",
+        "mc_cid",
+        "mc_eid",
+        "_ga",
+        "_gl",
+        "yclid",
+        "msclkid"
+      ],
+      "normalizeTrailingSlash": true,
+      "lowercaseHost": true
+    },
+    "historyStore": {
+      "type": "sqlite",
+      "path": "./data/history.db",
+      "retentionDays": 90
+    }
+  },
+  "output": {
+    "directory": "./output/daily-reports",
+    "filenameFormat": "YYYY-MM-DD.md",
+    "includeMetadata": true
+  },
+  "logging": {
+    "level": "info",
+    "filePattern": "./logs/YYYY-MM-DD.log",
+    "runStatusPath": "./logs/run_status.jsonl"
+  }
+}
