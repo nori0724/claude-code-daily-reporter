@@ -24,7 +24,7 @@ ${source.url}
     {
       "title": "記事タイトル",
       "url": "記事のURL（完全なURL）",
-      "summary": "記事の概要（100-200文字程度）",
+      "summary": "記事の概要（100-200文字程度、日本語で記述）",
       "publishedAt": "公開日時（ISO 8601形式、取得できない場合はnull）",
       "dateMetaContent": "日付メタタグの内容（article:published_time等、取得できない場合は省略）"
     }
@@ -76,7 +76,7 @@ ${trimmedResponse}
     {
       "title": "記事タイトル",
       "url": "記事のURL（完全なURL）",
-      "summary": "記事の概要（100-200文字程度）",
+      "summary": "記事の概要（100-200文字程度、日本語で記述）",
       "publishedAt": "公開日時（ISO 8601形式、取得できない場合はnull）",
       "dateMetaContent": "日付メタタグや補足日付情報（取得できない場合は省略）"
     }
@@ -140,7 +140,7 @@ ${queryStrings.length > 0 ? `キーワード: ${queryStrings.join(', ')}` : ''}
     {
       "title": "記事タイトル",
       "url": "記事のURL（完全なURL）",
-      "summary": "記事の概要（100-200文字程度）",
+      "summary": "記事の概要（100-200文字程度、日本語で記述）",
       "publishedAt": "公開日時（ISO 8601形式、推定でも可、不明な場合はnull）",
       "dateMetaContent": "検索結果に表示された日付テキスト（例: '3時間前', '2024年1月15日'）"
     }
@@ -196,7 +196,7 @@ ${queryStrings.join(', ')}
     {
       "title": "投稿本文の先頭50文字...",
       "url": "投稿のURL (https://x.com/...)",
-      "summary": "投稿の全文",
+      "summary": "投稿内容の日本語要約（100-200文字程度）",
       "publishedAt": "投稿日時（推定）"
     }
   ]
